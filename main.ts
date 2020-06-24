@@ -2,9 +2,9 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (じゃんけん == 1 && receivedNumber == 1) {
         radio.sendString("あいこ")
     } else if (じゃんけん == 2 && receivedNumber == 1) {
-        radio.sendString("まけ")
-    } else if (じゃんけん == 3 && receivedNumber == 1) {
         radio.sendString("かち")
+    } else if (じゃんけん == 3 && receivedNumber == 1) {
+        radio.sendString("まけ")
     } else if (じゃんけん == 1 && receivedNumber == 2) {
         radio.sendString("まけ")
     } else if (じゃんけん == 2 && receivedNumber == 2) {
