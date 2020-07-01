@@ -48,7 +48,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             . # . # .
             # . . . #
             `)
-    } else {
+    } else if (じゃんけん == receivedNumber) {
         basic.showLeds(`
             . . . . .
             . . . . .
@@ -68,6 +68,16 @@ input.onButtonPressed(Button.A, function () {
         `)
     radio.sendNumber(1)
     じゃんけん = 1
+})
+input.onGesture(Gesture.Shake, function () {
+    じゃんけん = 0
+    basic.showLeds(`
+        # # # # #
+        . . . . #
+        . # # # .
+        # . . . .
+        # # # # #
+        `)
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showLeds(`
@@ -93,4 +103,5 @@ input.onButtonPressed(Button.B, function () {
 })
 let じゃんけん = 0
 radio.setGroup(10)
+じゃんけん = 0
 basic.showIcon(IconNames.Yes)
